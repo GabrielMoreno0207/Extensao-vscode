@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #2C3E50; /* cor de fundo principal */
+    color: #ffffff; /* cor do texto */
+    position: relative; /* Permitir que os emojis sejam posicionados */
+}
+
+.container {
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    z-index: 1; /* Garantir que o conteúdo fique na frente dos emojis */
+}
+
+.color-picker {
+    background-color: #34495E; /* cor do fundo do card */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.color-input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ffffff; /* cor da borda do campo de entrada */
+    border-radius: 5px;
+    color: #ffffff; /* cor do texto do campo de entrada */
+    background-color: #2C3E50; /* cor de fundo do campo de entrada */
+}
+
+.color-preview {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.color-display {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.color-item {
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+}
+
+.clear-button, .copy-button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #E74C3C; /* cor do botão */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clear-button:hover, .copy-button:hover {
+    background-color: #C0392B; /* cor do botão ao passar o mouse */
+}
+
+.donate-button {
+    padding: 15px 30px;
+    background-color: #1abc9c; /* cor do botão de doação */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* cor do texto do botão de doação */
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #16a085; /* cor do botão de doação ao passar o mouse */
+}
+
+/* Estilos para emojis */
+.emoji {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.3;
+}
+
+/* Posicionamento dos emojis */
+.emoji-1 { top: 10%; left: 10%; }
+.emoji-2 { top: 20%; left: 20%; }
+.emoji-3 { top: 30%; left: 30%; }
+.emoji-4 { top: 40%; left: 40%; }
+.emoji-5 { top: 50%; left: 50%; }
+.emoji-6 { top: 60%; left: 60%; }
+.emoji-7 { top: 70%; left: 70%; }
+.emoji-8 { top: 80%; left: 80%; }
+.emoji-9 { top: 90%; left: 90%; }
+.emoji-10 { top: 15%; left: 80%; }
+.emoji-11 { top: 25%; left: 70%; }
+.emoji-12 { top: 35%; left: 60%; }
+.emoji-13 { top: 45%; left: 50%; }
+.emoji-14 { top: 55%; left: 40%; }
+.emoji-15 { top: 65%; left: 30%; }
+.emoji-16 { top: 75%; left: 20%; }
+.emoji-17 { top: 85%; left: 10%; }
+
+h1 {
+    margin-bottom: 20px;
+}
