@@ -42,4 +42,20 @@
                 colorDisplay.appendChild(colorItem);
             });
         }
-  
+
+        // Função para gerar o CSS com as cores
+function gerarCSS() {
+    var cssGerado = '';
+    colors.forEach((color, index) => {
+        cssGerado += ".color" + (index + 1) + " { color: " + color + "; }\n"; // Adiciona a regra CSS para cada cor
+    });
+    var outputDiv = document.getElementById('css-output');
+    outputDiv.innerText = cssGerado; // Exibe o CSS gerado na div
+}
+
+document.getElementById("opcoes").addEventListener("change", function() {
+    var opcaoSelecionada = document.getElementById("opcoes").value;
+    if (opcaoSelecionada === "opcao1") {
+        gerarCSS();
+    }
+}); 

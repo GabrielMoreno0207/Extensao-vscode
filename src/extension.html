@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="extension.css"/>
     <title>Teste de Cores</title>
-
+      
 </head>
 <body>
     <!-- Emojis -->
@@ -35,9 +35,24 @@
             <div class="color-preview" id="colorPreview"></div>
             <div class="color-display" id="colorDisplay"></div>
             <button class="clear-button" id="clearButton">Limpar Tudo</button>
-            <button class="copy-button" id="copyButton">Copiar Cores</button>
+            <button class="clear-button"  onclick="gerarCSS()">Gerar CSS</button>
+            <button class="clear-button" id="clearButton">Criar Paleta</button>
+            <button class="clear-button" id="clearButton">Compartilhar Paleta</button>
+            <div class="color-css" >
+                <code id="css-output">
+                   
+                </code>
+                
+            </div>
         </div>
     </div>
+<br>
+        <button class="coffee-button" id="coffeeButton">Buy Me a Coffee</button>
+
+
+
+
+   
 
     <script src="script.js"></script>
 </body>

@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Fira code', monospace;
     margin: 0;
     padding: 0;
     display: flex;
@@ -7,7 +8,7 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100vh;
-    background-color: #2C3E50; /* cor de fundo principal */
+    background-color: #100c1b; /* cor de fundo principal */
     color: #ffffff; /* cor do texto */
     position: relative; /* Permitir que os emojis sejam posicionados */
 }
@@ -20,28 +21,39 @@ body {
 }
 
 .color-picker {
-    background-color: #34495E; /* cor do fundo do card */
+    background-color: #0a0713; /* cor do fundo do card */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.color-css {
+    background-color: #0a0713; /* cor do fundo do card */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
 .color-input {
-    width: 100%;
-    margin-bottom: 10px;
+    width: calc(100% - 16px); /* Considerando o padding */
+    margin-bottom: 20px; /* Espaço extra entre o input e o próximo elemento */
+    margin-top: 10px; /* Margem superior para separá-lo do .color-preview */
     padding: 8px;
     font-size: 16px;
     border: 1px solid #ffffff; /* cor da borda do campo de entrada */
     border-radius: 5px;
     color: #ffffff; /* cor do texto do campo de entrada */
-    background-color: #2C3E50; /* cor de fundo do campo de entrada */
+    background-color: #140f27; /* cor de fundo do campo de entrada */
+    margin: 0 auto; /* centralizar horizontalmente */
 }
+
 
 .color-preview {
     width: 100%;
     height: 200px;
     margin-bottom: 10px;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .color-display {
@@ -58,11 +70,12 @@ body {
     height: 30px;
 }
 
+
 .clear-button, .copy-button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    background-color: #E74C3C; /* cor do botão */
+    background-color: #1e163a; /* cor do botão */
     border: none;
     border-radius: 5px;
     color: #ffffff; /* cor do texto do botão */
@@ -72,12 +85,12 @@ body {
 }
 
 .clear-button:hover, .copy-button:hover {
-    background-color: #C0392B; /* cor do botão ao passar o mouse */
+    background-color: #281e4e; /* cor do botão ao passar o mouse */
 }
 
-.donate-button {
+.coffee-button {
     padding: 15px 30px;
-    background-color: #1abc9c; /* cor do botão de doação */
+    background-color: #e0d143; /* cor do botão de doação */
     border: none;
     border-radius: 5px;
     color: #ffffff; /* cor do texto do botão de doação */
@@ -86,8 +99,8 @@ body {
     transition: background-color 0.3s;
 }
 
-.donate-button:hover {
-    background-color: #16a085; /* cor do botão de doação ao passar o mouse */
+.coffee-button:hover {
+    background-color: #c0b516; /* cor do botão de doação ao passar o mouse */
 }
 
 /* Estilos para emojis */
@@ -117,5 +130,18 @@ body {
 .emoji-17 { top: 85%; left: 10%; }
 
 h1 {
-    margin-bottom: 20px;
+    font-size: 2.5rem; /* Reduzi o tamanho da fonte */
+    text-align: center;
+    height: auto; /* Removi a altura fixa */
+    line-height: 1; /* Defini a altura da linha como 1 para evitar espaçamento extra */
+    color: #fcedd8;
+    background: #0a0713;
+    font-family: 'Fira code', monospace;
+    font-weight: 700;
+    border-radius:  10px;
+    /* Removi o text-shadow para simplificar */
 }
+
+
+
+

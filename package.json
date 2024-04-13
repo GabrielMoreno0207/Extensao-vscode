@@ -10,8 +10,7 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-     ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -20,9 +19,7 @@
         "title": "Abrir Extensão Color Test🎨",
         "category": "Color Test"
       }
-
     ]
-
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -33,14 +30,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.88.0",
     "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
+    "@types/node": "^18.19.31",
+    "@types/vscode": "^1.88.0",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.3.3",
     "@vscode/test-cli": "^0.0.8",
-    "@vscode/test-electron": "^2.3.9"
+    "@vscode/test-electron": "^2.3.9",
+    "eslint": "^8.57.0",
+    "typescript": "^5.3.3"
   }
 }
+
