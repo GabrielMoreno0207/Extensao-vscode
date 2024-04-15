@@ -123,7 +123,7 @@ body {
     opacity: 0.3;
 }
 
-/* Posicionamento dos emojis */
+/* Posicionamento dos emojis
 .emoji-1 { top: 10%; left: 10%; }
 .emoji-2 { top: 20%; left: 20%; }
 .emoji-3 { top: 30%; left: 30%; }
@@ -140,7 +140,7 @@ body {
 .emoji-14 { top: 55%; left: 40%; }
 .emoji-15 { top: 65%; left: 30%; }
 .emoji-16 { top: 75%; left: 20%; }
-.emoji-17 { top: 85%; left: 10%; }
+.emoji-17 { top: 85%; left: 10%; } */
 
 h1 {
     font-size: 2.5rem; /* Reduzi o tamanho da fonte */
