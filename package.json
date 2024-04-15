@@ -3,7 +3,6 @@
   "displayName": "Color Test",
   "description": "",
   "version": "0.0.1",
-  "icon": "icons/cor.png",
   "engines": {
     "vscode": "^1.88.0"
   },

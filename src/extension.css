@@ -25,6 +25,8 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    max-height: 300px; /* Altura máxima do card */
+    overflow-y: auto; /* Habilitar a barra de rolagem vertical */
 }
 
 .color-css {
@@ -50,24 +52,34 @@ body {
 
 .color-preview {
     width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display:  none;
+}
+.color-preview2 {
+    width: 100%;
     height: 200px;
     margin-bottom: 10px;
     border-radius: 5px;
     margin-top: 10px;
+    display: none;
 }
 
 .color-display {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 5px;
+    padding-top: 6px;
 }
 
 .color-item {
     display: inline-block;
     margin-right: 5px;
     border-radius: 5px;
-    width: 50px;
-    height: 30px;
+    width: 40px;
+    height: 20px;
 }
 
 
@@ -93,14 +105,15 @@ body {
     background-color: #e0d143; /* cor do botão de doação */
     border: none;
     border-radius: 5px;
-    color: #ffffff; /* cor do texto do botão de doação */
+    color: black; /* cor do texto do botão de doação */
     font-size: 18px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .coffee-button:hover {
-    background-color: #c0b516; /* cor do botão de doação ao passar o mouse */
+    background-color: #c09316; /* cor do botão de doação ao passar o mouse */
+    transform: scale(1.3);
 }
 
 /* Estilos para emojis */
