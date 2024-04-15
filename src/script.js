@@ -45,16 +45,16 @@ function updateColorDisplay() {
     });
 }
 
-// Função para gerar o CSS com as cores
+
 function gerarCSS() {
     var cssGerado = '';
     const colorItems = document.querySelectorAll('.color-item');
     colorItems.forEach((colorItem, index) => {
         const color = colorItem.style.backgroundColor;
-        cssGerado += ".color" + (index + 1) + " { color: " + color + "; }\n"; // Adiciona a regra CSS para cada cor
+        cssGerado += ".color" + (index + 1) + " { color: " + color + "; }\n"; 
     });
     var outputDiv = document.getElementById('css-output');
-    outputDiv.innerText = cssGerado; // Exibe o CSS gerado na div
+    outputDiv.innerText = cssGerado; 
 }
 
 document.getElementById("opcoes").addEventListener("change", function() {
@@ -68,11 +68,11 @@ document.getElementById("opcoes").addEventListener("change", function() {
 function criarPaletaDeCores() {
     const colorPickerDiv = document.querySelector('.color-preview2');
 
-    // Limpar a div color-picker
+   
     colorPickerDiv.innerHTML = '';
     colorPickerDiv.style.display = 'block';
 
-    // Array de cores
+ 
     const colors = [
         "#000000", "#696969", "#808080", "#A9A9A9", "#C0C0C0", "#D3D3D3", "#DCDCDC", "#FFFFFF", "#6A5ACD", "#483D8B",
         "#191970", "#000080", "#00008B", "#0000CD", "#0000FF", "#6495ED", "#4169E1", "#1E90FF", "#00BFFF", "#87CEFA",
@@ -90,7 +90,7 @@ function criarPaletaDeCores() {
         "#E6E6FA", "#D8BFD8", "#F0FFFF", "#E0FFFF", "#B0E0E6", "#E0FFFF", "#F0FFF0", "#F5FFFA"
     ];
 
-    // Criar divs para cada cor e adicionar à div color-picker
+    
     colors.forEach(color => {
         const colorDiv = document.createElement('div');
         colorDiv.style.backgroundColor = color;
@@ -100,20 +100,18 @@ function criarPaletaDeCores() {
         colorDiv.style.display = 'inline-block';
         colorPickerDiv.appendChild(colorDiv);
 
-        // Adicionar contador de cliques para cada cor
         let clicks = 0;
 
-        // Adicionar evento de clique à cor
         colorDiv.addEventListener('click', () => {
             clicks++;
-            // Verificar se o clique foi o segundo
+          
             if (clicks === 2) {
-                // Adicionar a cor clicada à lista de cores no colorDisplay
+               
                 const colorItem = document.createElement('div');
                 colorItem.classList.add('color-item');
                 colorItem.style.backgroundColor = color;
                 colorDisplay.appendChild(colorItem);
-                // Resetar o contador de cliques
+              
                 clicks = 0;
             }
         });
@@ -122,11 +120,11 @@ function criarPaletaDeCores() {
 
 
 function limparCores() {
-    colorDisplay.innerHTML = ''; // Remove todos os elementos filhos do colorDisplay
+    colorDisplay.innerHTML = ''; 
     const outputDiv = document.getElementById('css-output');
-    outputDiv.innerText = ''; // Limpa o CSS gerado
+    outputDiv.innerText = ''; 
     const colorPickerDiv = document.querySelector('.color-preview2');
-    colorPickerDiv.innerHTML = ''; // Remove a paleta de cores
+    colorPickerDiv.innerHTML = ''; 
     colorPickerDiv.style.display = 'none';
     const colorInput = document.getElementById('colorInput');
     colorInput.value = '';
