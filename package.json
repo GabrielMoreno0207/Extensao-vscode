@@ -14,9 +14,9 @@
   "contributes": {
     "commands": [
       {
-        "command": "ColorTest.start",
-        "title": "Abrir Extensão Color Test🎨",
-        "category": "Color Test"
+        "command": "JustColors.start",
+        "title": "Abrir Extensão Just Colors🎨",
+        "category": "Just Colors"
       }
     ]
   },
@@ -38,6 +38,8 @@
     "@vscode/test-electron": "^2.3.9",
     "eslint": "^8.57.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "pdf-lib": "^1.17.1"
   }
 }
-

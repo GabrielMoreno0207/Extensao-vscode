@@ -132,3 +132,20 @@ function limparCores() {
     colorPreview.style.display = 'none';
     
 }
+
+
+const btnGerarDegrade = document.getElementById('btnGerarDegrade');
+        const gradienteDiv = document.getElementById('gradiente');
+
+        btnGerarDegrade.addEventListener('click',  () => {
+            const corInicial = document.getElementById('corInicial').value;
+            const corFinal = document.getElementById('corFinal').value;
+
+            // Aplicar o degradê à div gradiente
+            gradienteDiv.style.background = `linear-gradient(to right, ${corInicial}, ${corFinal})`;
+        });
+
+
+
+
+

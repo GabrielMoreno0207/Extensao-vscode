@@ -29,7 +29,9 @@
 
     <!-- Conteúdo principal -->
     <div class="container">
-        <h1>Just Colors</h1>
+        <h1>Just <span class="color-red">C</span><span class="color-orange">o</span><span class="color-yellow">l</span><span class="color-green">o</span><span class="color-blue">r</span><span class="color-purple">s</span></h1>
+
+        
         <div class="color-picker">
             <input type="text" class="color-input" id="colorInput" placeholder="Digite uma cor em hexadecimal (#RRGGBB)">
             <div class="color-preview" id="colorPreview"></div>
@@ -39,7 +41,17 @@
             <button class="clear-button" id="clearButton">Limpar Tudo</button>
             <button class="clear-button"  onclick="gerarCSS()">Gerar CSS</button>
             <button class="clear-button" id="criarPaleta" onclick="criarPaletaDeCores()">Criar Paleta</button>
-            <button class="clear-button" id="clearButton">Compartilhar Paleta</button>
+            <button class="clear-button" id="copyButton" onclick="copiarCores()">Copiar Paleta</button>
+            <label for="corInicial">Cor Inicial:</label>
+    <input type="color" id="corInicial">
+
+    <label for="corFinal">Cor Final:</label>
+    <input type="color" id="corFinal">
+
+    <button id="btnGerarDegrade">Gerar Degrade Personalizado</button>
+
+    <div id="gradiente"></div>
+
             <div class="color-css" >
                 <code class ="code" id="css-output">
                    
