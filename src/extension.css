@@ -177,4 +177,59 @@ code {
 .color-purple { color: #FFFFFF;  font-family: "Fredericka the Great", serif; font-weight: 400; font-style: normal;}
 
 
-
+main {
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #0a0713;
+  }
+  
+  h3 {
+    color: #616161;
+  }
+  
+  .divColors {
+    text-align: center;
+  }
+  
+  input[type="color"] {
+    border: none;
+    background: transparent;
+    width: 80px;
+    height: 40px;
+  }
+  
+  input[type="color"]::-webkit-color-swatch {
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .divDirection > i {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  .active {
+    color: black!important;
+  }
+  
+  button {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color:#1e163a;
+    cursor: pointer;
+  }
+  
+  textarea {
+    resize: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #140f27;
+  }

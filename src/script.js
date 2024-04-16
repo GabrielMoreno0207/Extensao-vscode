@@ -134,16 +134,29 @@ function limparCores() {
 }
 
 
-const btnGerarDegrade = document.getElementById('btnGerarDegrade');
-        const gradienteDiv = document.getElementById('gradiente');
+const directions = document.querySelectorAll(".divDirection i");
+const color01 = document.querySelector("#color01");
+const color02 = document.querySelector("#color02");
+const btnGerar = document.querySelector("button");
+const output = document.querySelector("textarea");
+let direction = "to top";
 
-        btnGerarDegrade.addEventListener('click',  () => {
-            const corInicial = document.getElementById('corInicial').value;
-            const corFinal = document.getElementById('corFinal').value;
+directions.forEach((item) => {
+  item.onclick = () => {
+    document.querySelector(".active").classList.remove("active");
 
-            // Aplicar o degradê à div gradiente
-            gradienteDiv.style.background = `linear-gradient(to right, ${corInicial}, ${corFinal})`;
-        });
+    item.classList.add("active");
+
+    direction = item.getAttribute("data-dir");
+  };
+});
+
+btnGerar.onclick = () => {
+  const gradient = `linear-gradient(${direction}, ${color01.value}, ${color02.value})`;
+
+  document.body.style.backgroundImage = gradient;
+  output.value = gradient;
+};
 
 
 
