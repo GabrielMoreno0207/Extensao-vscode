@@ -157,7 +157,16 @@ h1 {
     /* Removi o text-shadow para simplificar */
 }
 
-
+code {
+   
+   
+    background-color: #0a0713; /* cor do botão */
+    border: none;
+    border-radius: 5px;
+    color: #ffffff; /* cor do texto do botão */
+    font-size: 16px;
+    cursor: pointer;
+}
 
 
 .color-red { color: #4169E1;  font-family: "Fredericka the Great", serif; font-weight: 400; font-style: normal;}
