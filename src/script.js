@@ -149,3 +149,13 @@ generateGradient();
  }
 
  criarPaletaDeCores();
+
+ function copyCode() {
+    var codeElement = document.getElementById("css-output");
+    var range = document.createRange();
+    range.selectNode(codeElement);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+}
