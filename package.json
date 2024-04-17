@@ -1,6 +1,11 @@
 {
   "name": "color-test",
   "displayName": "Color Test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielMoreno0207/Extensao-vscode/blob/main/src/imgs/extensao.pngt"
+    
+  },
   "description": "",
   "version": "0.0.1",
   "engines": {

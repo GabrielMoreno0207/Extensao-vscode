@@ -26,6 +26,10 @@ A extensão é bem simples de manuzear, então não requer certas configuraçõe
 
 ---
 
+## Licença
+
+## Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 ## Extensão em Ação 😎
 
 ![Just Colors](imgs/extensao.png)
