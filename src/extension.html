@@ -5,28 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="extension.css"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    
     <title>Teste de Cores</title>
       
 </head>
 <body>
-    <!-- Emojis
-    <div class="emoji emoji-1">😊</div>
-    <div class="emoji emoji-2">🎨</div>
-    <div class="emoji emoji-3">💡</div>
-    <div class="emoji emoji-4">🖌️</div>
-    <div class="emoji emoji-5">🌈</div>
-    <div class="emoji emoji-6">❤️</div>
-    <div class="emoji emoji-7">😍</div>
-    <div class="emoji emoji-8">😎</div>
-    <div class="emoji emoji-9">🚀</div>
-    <div class="emoji emoji-10">🍀</div>
-    <div class="emoji emoji-11">🌟</div>
-    <div class="emoji emoji-12">🔥</div>
-    <div class="emoji emoji-13">💫</div>
-    <div class="emoji emoji-14">👍</div>
-    <div class="emoji emoji-15">🤩</div>
-    <div class="emoji emoji-16">✨</div>
-    <div class="emoji emoji-17">👏</div> -->
 
     <!-- Conteúdo principal -->
     <div class="container">
@@ -42,32 +25,23 @@
             <button class="clear-button" id="clearButton">Limpar Tudo</button>
             <button class="clear-button"  onclick="gerarCSS()">Gerar CSS</button>
             <button class="clear-button" id="criarPaleta" onclick="criarPaletaDeCores()">Criar Paleta</button>
-            <button class="clear-button" id="copyButton" onclick="copiarCores()">Copiar Paleta</button>
             
-            <main>
-                <h3>Selecione as cores</h3>
-                <div class="divColors">
-                  <input type="color" id="color01" />
-                  <input type="color" id="color02" />
-                </div>
+            <h3>Criar Gradiente</h3>
+            <div>
+                <input type="color" id="startColor" value="#ff0000">
+                <input type="color" id="endColor" value="#0000ff">
+                <select id="direction">
+                    <option value="to right">Direita</option>
+                    <option value="to left">Esquerda</option>
+                    <option value="to bottom">Baixo</option>
+                    <option value="to top">Cima</option>
+                </select>
+                
+                
+               
+            </div>
             
-                <h3>Selecione a direção</h3>
-            
-                <div class="divDirection">
-                  <i data-dir="to top" class='bx bx-up-arrow-circle active'></i>
-                  <i data-dir="to top right" class='bx bx-right-top-arrow-circle'></i>
-                  <i data-dir="to right" class='bx bx-right-arrow-circle'></i>
-                  <i data-dir="to bottom right" class='bx bx-right-down-arrow-circle'></i>
-                  <i data-dir="to bottom" class='bx bx-down-arrow-circle'></i>
-                  <i data-dir="to bottom left" class='bx bx-left-down-arrow-circle'></i>
-                  <i data-dir="to left" class='bx bx-left-arrow-circle'></i>
-                  <i data-dir="to top left" class='bx bx-left-top-arrow-circle'></i>
-                </div>
-            
-                <button onclick="btnGerar()">Gerar</button>
-            
-                <textarea  cols="30" rows="5"></textarea>
-              </main>
+            <div id="gradient-box"></div>
 
             <div class="color-css" >
                 <code class ="code" id="css-output">
@@ -78,14 +52,11 @@
         </div>
     </div>
 <br>
+
 <a href="https://buymeacoffee.com/gabrielmoreno
 ">
         <button  href=""class="coffee-button" id="coffeeButton">Apoiar desenvolvedor</button>
     </a>
-
-
-
-   
 
     <script src="script.js"></script>
 </body>

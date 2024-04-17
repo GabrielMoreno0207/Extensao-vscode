@@ -26,7 +26,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-height: 300px; /* Altura máxima do card */
+    max-height: 400px; /* Altura máxima do card */
     overflow-y: auto; /* Habilitar a barra de rolagem vertical */
 }
 
@@ -103,17 +103,17 @@ body {
 
 .coffee-button {
     padding: 15px 30px;
-    background-color: #e0d143; /* cor do botão de doação */
+    background-color: #550d80; /* cor do botão de doação */
     border: none;
     border-radius: 5px;
-    color: black; /* cor do texto do botão de doação */
+    color: rgb(255, 255, 255); /* cor do texto do botão de doação */
     font-size: 18px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .coffee-button:hover {
-    background-color: #c09316; /* cor do botão de doação ao passar o mouse */
+    background-color: #480b6b; /* cor do botão de doação ao passar o mouse */
     transform: scale(1.3);
 }
 
@@ -123,25 +123,6 @@ body {
     font-size: 2rem;
     opacity: 0.3;
 }
-
-/* Posicionamento dos emojis
-.emoji-1 { top: 10%; left: 10%; }
-.emoji-2 { top: 20%; left: 20%; }
-.emoji-3 { top: 30%; left: 30%; }
-.emoji-4 { top: 40%; left: 40%; }
-.emoji-5 { top: 50%; left: 50%; }
-.emoji-6 { top: 60%; left: 60%; }
-.emoji-7 { top: 70%; left: 70%; }
-.emoji-8 { top: 80%; left: 80%; }
-.emoji-9 { top: 90%; left: 90%; }
-.emoji-10 { top: 15%; left: 80%; }
-.emoji-11 { top: 25%; left: 70%; }
-.emoji-12 { top: 35%; left: 60%; }
-.emoji-13 { top: 45%; left: 50%; }
-.emoji-14 { top: 55%; left: 40%; }
-.emoji-15 { top: 65%; left: 30%; }
-.emoji-16 { top: 75%; left: 20%; }
-.emoji-17 { top: 85%; left: 10%; } */
 
 h1 {
     font-size: 2.5rem; /* Reduzi o tamanho da fonte */
@@ -177,59 +158,30 @@ code {
 .color-purple { color: #FFFFFF;  font-family: "Fredericka the Great", serif; font-weight: 400; font-style: normal;}
 
 
-main {
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #0a0713;
-  }
-  
-  h3 {
-    color: #616161;
-  }
-  
-  .divColors {
-    text-align: center;
-  }
-  
-  input[type="color"] {
-    border: none;
-    background: transparent;
+.form-group {
+  margin-bottom: 10px;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input[type="color"],
+select {
     width: 80px;
-    height: 40px;
-  }
-  
-  input[type="color"]::-webkit-color-swatch {
-    border-radius: 10px;
-    border: none;
-  }
-  
-  .divDirection > i {
-    font-size: 30px;
-    color: #aaa;
-    cursor: pointer;
-  }
-  
-  .active {
-    color: black!important;
-  }
-  
-  button {
     padding: 5px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    background-color:#1e163a;
-    cursor: pointer;
-  }
-  
-  textarea {
-    resize: none;
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-    background-color: #140f27;
-  }
+    background-color: #1e163a;
+    border: 1px solid #8a2be2; /* cor da borda roxa */
+    border-radius: 3px;
+    margin-right: 10px;
+    color: #FFFFFF;
+}
+
+#gradient-box {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000;
+  margin: 20px auto;
+}
+
