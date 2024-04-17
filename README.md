@@ -1,7 +1,5 @@
 # Just Colors
 
-![logo](imgs/just.png)
-
 Aqui voce entende um pouco melhor como funciona a extensão de cores "just colors".
 
 ## Funcionalidades
@@ -29,9 +27,5 @@ A extensão é bem simples de manuzear, então não requer certas configuraçõe
 ## Licença
 
 ## Este projeto é licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Extensão em Ação 😎
-
-![Just Colors](imgs/extensao.png)
 
 **APROVEITE!!!**
