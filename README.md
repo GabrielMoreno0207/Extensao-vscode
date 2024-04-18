@@ -1,12 +1,12 @@
 
  <p align="center">
   <img src="https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/29ab1048-4f73-4776-bee6-df42561549bc" alt="Just">
-
+</p>
 Aqui voce entende um pouco melhor como funciona a extensão de cores "just colors".
 
- ## Visual
+   <p align="center">
   <img src="https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/99265267-460b-4e10-b6f7-b0f04b1385eb" alt="extensao">
-
+ </p>
 
 
 ## Funcionalidades
@@ -37,4 +37,4 @@ A extensão é bem simples de manuzear, então não requer certas configuraçõe
 
 **APROVEITE!!!**
 
-</p>
+
