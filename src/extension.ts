@@ -22,41 +22,33 @@ export function activate(context: vscode.ExtensionContext) {
                 },
             );
 
-          const path = require('path');
+            const srcPath = vscode.Uri.file(context.extensionPath + '/src');
+            const htmlPath = vscode.Uri.joinPath(srcPath, 'extension.html');
+            const cssPath = vscode.Uri.joinPath(srcPath, 'extension.css');
+            const jsPath = vscode.Uri.joinPath(srcPath, 'script.js');
 
-// Obtenha o caminho para o diretório da extensão
-const extensionDir = context.extensionPath;
+            if (!fs.existsSync(htmlPath.fsPath)) {
+                vscode.window.showErrorMessage(`HTML não encontrado ${htmlPath.fsPath}`);
+                return;
+            }
 
-// Construa caminhos relativos para os arquivos
-const htmlPath = vscode.Uri.file(path.join(extensionDir, 'src', 'extension.html'));
-const cssPath = vscode.Uri.file(path.join(extensionDir, 'src', 'extension.css'));
-const jsPath = vscode.Uri.file(path.join(extensionDir, 'src', 'script.js'));
+            if (!fs.existsSync(cssPath.fsPath)) {
+                vscode.window.showErrorMessage(`CSS não encontrado ${cssPath.fsPath}`);
+                return;
+            }
 
-// Verifique se os arquivos existem
-if (!fs.existsSync(htmlPath.fsPath)) {
-    vscode.window.showErrorMessage(`HTML não encontrado ${htmlPath.fsPath}`);
-    return;
-}
+            if (!fs.existsSync(jsPath.fsPath)) {
+                vscode.window.showErrorMessage(`JavaScript não encontrado ${jsPath.fsPath}`);
+                return;
+            }
 
-if (!fs.existsSync(cssPath.fsPath)) {
-    vscode.window.showErrorMessage(`CSS não encontrado ${cssPath.fsPath}`);
-    return;
-}
+            const htmlContent = fs.readFileSync(htmlPath.fsPath, 'utf-8');
+            const cssContent = fs.readFileSync(cssPath.fsPath, 'utf-8');
+            const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
 
-if (!fs.existsSync(jsPath.fsPath)) {
-    vscode.window.showErrorMessage(`JavaScript não encontrado ${jsPath.fsPath}`);
-    return;
-}
-
-// Leia o conteúdo dos arquivos
-const htmlContent = fs.readFileSync(htmlPath.fsPath, 'utf-8');
-const cssContent = fs.readFileSync(cssPath.fsPath, 'utf-8');
-const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
-
-// Combine o conteúdo HTML, CSS e JavaScript
-const combinedContent = htmlContent.replace('</head>', `<style>${cssContent}</style></head>`) + `<script>${jsContent}</script>`;
-panel.webview.html = combinedContent;
-
+            // HTML, CSS, and JavaScript
+            const combinedContent = htmlContent.replace('</head>', `<style>${cssContent}</style></head>`) + `<script>${jsContent}</script>`;
+            panel.webview.html = combinedContent;
         })
     );
 }
