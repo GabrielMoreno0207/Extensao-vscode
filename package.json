@@ -1,6 +1,7 @@
 {
-  "name": "color-test",
-  "displayName": "Color Test",
+  "name": "justcolors",
+  "publisher": "DevGabrielMoreno",
+  "displayName": "Just Colors🎨",
   "description": "",
   "version": "0.0.1",
   "engines": {
