@@ -38,8 +38,8 @@ A extensão é bem simples de manuzear, então não requer certas configuraçõe
 
 **APROVEITE!!!**
 
-<button style="background-color: #550d80; 
-          ">Apoiar Desenvolvedor</button>
+
+       
 
 
 
