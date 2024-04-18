@@ -38,7 +38,7 @@ A extensão é bem simples de manuzear, então não requer certas configuraçõe
 
 **APROVEITE!!!**
 
-###Apoiar Desenvolvedor: https://buymeacoffee.com/gabrielmoreno ☕
+## Apoiar Desenvolvedor: https://buymeacoffee.com/gabrielmoreno ☕
        
 
 
