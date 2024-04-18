@@ -5,8 +5,9 @@
 
 Aqui voce entende um pouco melhor como funciona a extensão de cores "just colors".
 
-## Visual
+
 <p align="center">
+ ## Visual
   <img src="https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/99265267-460b-4e10-b6f7-b0f04b1385eb" alt="extensao">
 </p>
 
