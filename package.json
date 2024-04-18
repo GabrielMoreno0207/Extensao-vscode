@@ -6,6 +6,11 @@
   "engines": {
     "vscode": "^1.88.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GabrielMoreno0207/Extensao-vscode"
+},
+
   "categories": [
     "Other"
   ],
@@ -40,6 +45,6 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "pdf-lib": "^1.17.1"
+    
   }
 }
