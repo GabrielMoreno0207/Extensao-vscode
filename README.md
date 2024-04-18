@@ -1,7 +1,7 @@
-# Just Colors
+# ![Just](https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/29ab1048-4f73-4776-bee6-df42561549bc)
 
 Aqui voce entende um pouco melhor como funciona a extensão de cores "just colors".
-![Just](https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/29ab1048-4f73-4776-bee6-df42561549bc)
+
 
 
 ## Funcionalidades
