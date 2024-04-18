@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
                 },
             );
 
-            const srcPath = vscode.Uri.joinPath(context.extensionUri, 'src');
+            const srcPath = vscode.Uri.file(context.extensionPath + '/src');
             const htmlPath = vscode.Uri.joinPath(srcPath, 'extension.html');
             const cssPath = vscode.Uri.joinPath(srcPath, 'extension.css');
             const jsPath = vscode.Uri.joinPath(srcPath, 'script.js');
