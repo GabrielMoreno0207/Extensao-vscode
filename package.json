@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/GabrielMoreno0207/Extensao-vscode"
-},
+  },
 
   "categories": [
     "Other"
@@ -24,7 +24,10 @@
         "title": "Abrir Extensão Just Colors🎨",
         "category": "Just Colors"
       }
-    ]
+    ],
+    "html": {
+      "path": "./src/extension.html"
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -45,7 +48,5 @@
     "eslint": "^8.57.0",
     "typescript": "^5.3.3"
   },
-  "dependencies": {
-    
-  }
+  "dependencies": {}
 }
