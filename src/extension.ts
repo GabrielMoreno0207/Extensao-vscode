@@ -35,7 +35,8 @@ export function activate(context: vscode.ExtensionContext) {
             const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
 
             // HTML e CSS
-            const htmlContent = `
+            function getWebviewContent(){ 
+                return `
             <!DOCTYPE html>
             <html lang="en">
             <head>
@@ -105,8 +106,9 @@ export function activate(context: vscode.ExtensionContext) {
             </html>
             
             `;
+        }
 
-            panel.webview.html = htmlContent;
+            panel.webview.html = getWebviewContent();
         })
     );
 }
