@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
+import * as path from 'path';
 import * as fs from 'fs';
-import { join } from 'path';
 
 export function activate(context: vscode.ExtensionContext) {
     // Criar um novo item na barra de status
@@ -23,10 +23,10 @@ export function activate(context: vscode.ExtensionContext) {
                 },
             );
 
-            const srcPath = vscode.Uri.file(context.extensionPath + '/src');
-            const htmlPath = vscode.Uri.joinPath(srcPath, 'extension.html');
-            const cssPath = vscode.Uri.joinPath(srcPath, 'extension.css');
-            const jsPath = vscode.Uri.joinPath(srcPath, 'script.js');
+            // Obter o caminho para os arquivos HTML, CSS e JavaScript
+            const htmlPath = vscode.Uri.file(path.join(context.extensionPath, 'src', 'extension.html'));
+            const cssPath = vscode.Uri.file(path.join(context.extensionPath, 'src', 'extension.css'));
+            const jsPath = vscode.Uri.file(path.join(context.extensionPath, 'src', 'script.js'));
 
             if (!fs.existsSync(htmlPath.fsPath)) {
                 vscode.window.showErrorMessage(`HTML não encontrado ${htmlPath.fsPath}`);
@@ -43,11 +43,12 @@ export function activate(context: vscode.ExtensionContext) {
                 return;
             }
 
+            // Ler o conteúdo dos arquivos
             const htmlContent = fs.readFileSync(htmlPath.fsPath, 'utf-8');
             const cssContent = fs.readFileSync(cssPath.fsPath, 'utf-8');
             const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
 
-            // HTML, CSS, and JavaScript
+            // HTML, CSS, e JavaScript combinados
             const combinedContent = htmlContent.replace('</head>', `<style>${cssContent}</style></head>`) + `<script>${jsContent}</script>`;
             panel.webview.html = combinedContent;
         })
