@@ -98,9 +98,9 @@ export function activate(context: vscode.ExtensionContext) {
             ">
                     <button  href=""class="coffee-button" id="coffeeButton">Apoiar desenvolvedor</button>
                 </a>
-            
-                <script>
-                        ${jsContent}
+
+              <script>
+                ${jsContent}
                 </script>
             </body>
             </html>
