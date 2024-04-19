@@ -23,7 +23,7 @@ Basta apenas instalar na aba de extensões do próprio `vscode` procure por `jus
 
 ## Configurações da Extensão
 
-A extensão é bem simples de manuzear, então não requer certas configurações, porem você pode configurar algum comando para abrir a extensão, inicialmente iremos utilizar o comando `ctrl + shift + P` e pesquisaremos `Abrir Extensão Just Colors🎨` ao lado tera uma `⚙` onde será possivel especificar algum comando de sua preferenciar para fazer a inicialização.
+A extensão é bem simples de manuzear, então não requer certas configurações, porem você pode configurar algum comando para abrir a extensão, inicialmente iremos utilizar o comando `ctrl` + `shift` + `P` e pesquisaremos `Abrir Extensão Just Colors🎨` ao lado tera uma `⚙` onde será possivel especificar algum comando de sua preferenciar para fazer a inicialização.
 
 ## Avisos 📢
 
