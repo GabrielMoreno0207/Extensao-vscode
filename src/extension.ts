@@ -23,8 +23,9 @@ export function activate(context: vscode.ExtensionContext) {
                 },
             );
 
-            // Obter o caminho para o arquivo JavaScript
-const workerSource = vscode.Uri.file(path.join(context.extensionPath,  'script.js')).fsPath;
+// Obter o caminho para o arquivo JavaScript
+const workerSource = 'script.js';
+
 
 // Fetch do arquivo JavaScript
 fetch(workerSource)
