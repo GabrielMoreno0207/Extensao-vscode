@@ -24,15 +24,20 @@ export function activate(context: vscode.ExtensionContext) {
             );
 
             // Obter o caminho para o arquivo JavaScript
-            const jsPath = vscode.Uri.file(path.join(context.extensionPath, 'src', 'script.js'));
+            // Caminho para o arquivo JavaScript do worker
+const workerSource = vscode.Uri.file(path.join(context.extensionPath, 'src', 'worker.js')).fsPath;
 
-            if (!fs.existsSync(jsPath.fsPath)) {
-                vscode.window.showErrorMessage(`JavaScript não encontrado ${jsPath.fsPath}`);
-                return;
-            }
+// Fetch do arquivo JavaScript
+fetch(workerSource)
+  .then(result => result.blob())
+  .then(blob => {
+    const blobUrl = URL.createObjectURL(blob);
+    new Worker(blobUrl);
+  })
+  .catch(error => {
+    console.error('Erro ao carregar o worker:', error);
+  });
 
-            // Ler o conteúdo do arquivo JavaScript
-            const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
 
             // HTML e CSS
             function getWebviewContent(){ 
@@ -99,9 +104,7 @@ export function activate(context: vscode.ExtensionContext) {
                     <button  href=""class="coffee-button" id="coffeeButton">Apoiar desenvolvedor</button>
                 </a>
 
-              <script>
-                ${jsContent}
-                </script>
+              
             </body>
             </html>
             
