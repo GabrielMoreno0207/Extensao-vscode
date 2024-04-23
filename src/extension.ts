@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
 import * as path from 'path';
+import webpack = require('webpack');
 
 export function activate(context: vscode.ExtensionContext) {
     // Criar um novo item na barra de status
@@ -23,9 +24,18 @@ export function activate(context: vscode.ExtensionContext) {
                 },
             );
 
-// Obter o caminho para o arquivo JavaScript
-const workerSourcePath = vscode.Uri.file(context.asAbsolutePath('script.js'));
-const workerSourceUri = panel.webview.asWebviewUri(workerSourcePath).toString();
+
+ // Obter o caminho para o arquivo JavaScript
+ const jsPath = vscode.Uri.file(path.join(context.extensionPath, 'dist', 'bundle.js'));
+
+
+ if (!fs.existsSync(jsPath.fsPath)) {
+     vscode.window.showErrorMessage(`JavaScript não encontrado ${jsPath.fsPath}`);
+     return;
+ }
+
+ // Ler o conteúdo do arquivo JavaScript
+ const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
 
 
 
@@ -282,7 +292,7 @@ const workerSourceUri = panel.webview.asWebviewUri(workerSourcePath).toString();
                     <button  href=""class="coffee-button" id="coffeeButton">Apoiar desenvolvedor</button>
                 </a>
 
-                <script src="${workerSourceUri}"></script>
+                <script>${jsContent}</script>
             </body>
             </html>
             
