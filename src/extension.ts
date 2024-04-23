@@ -24,19 +24,9 @@ export function activate(context: vscode.ExtensionContext) {
             );
 
 // Obter o caminho para o arquivo JavaScript
-const workerSource = 'script.js';
+const workerSourcePath = vscode.Uri.file(context.asAbsolutePath('script.js'));
+const workerSourceUri = panel.webview.asWebviewUri(workerSourcePath).toString();
 
-
-// Fetch do arquivo JavaScript
-fetch(workerSource)
-  .then(result => result.blob())
-  .then(blob => {
-    const blobUrl = URL.createObjectURL(blob);
-    new Worker(blobUrl);
-  })
-  .catch(error => {
-    console.error('Erro ao carregar o worker:', error);
-  });
 
 
             // HTML e CSS
@@ -292,7 +282,7 @@ fetch(workerSource)
                     <button  href=""class="coffee-button" id="coffeeButton">Apoiar desenvolvedor</button>
                 </a>
 
-              
+                <script src="${workerSourceUri}"></script>
             </body>
             </html>
             
