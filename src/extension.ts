@@ -25,22 +25,9 @@ export function activate(context: vscode.ExtensionContext) {
             );
 
 
- // Obter o caminho para o arquivo JavaScript
- const jsPath = vscode.Uri.file(path.join(context.extensionPath, 'dist', 'bundle.js'));
-
-
- if (!fs.existsSync(jsPath.fsPath)) {
-     vscode.window.showErrorMessage(`JavaScript não encontrado ${jsPath.fsPath}`);
-     return;
- }
-
- // Ler o conteúdo do arquivo JavaScript
- const jsContent = fs.readFileSync(jsPath.fsPath, 'utf-8');
-
-
-
             // HTML e CSS
             function getWebviewContent(){ 
+                const jsContent = fs.readFileSync(path.join(context.extensionPath, 'media', 'script.js'), 'utf-8');
                 return `
             <!DOCTYPE html>
             <html lang="en">

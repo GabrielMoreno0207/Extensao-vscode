@@ -3,7 +3,8 @@
   "publisher": "DevGabrielMoreno",
   "displayName": "Just Colors🎨",
   "description": "",
-  "version": "0.1.2",
+  "icon": "src/imgs/logo.png",
+  "version": "0.1.4",
   "engines": {
     "vscode": "^1.88.0"
   },
