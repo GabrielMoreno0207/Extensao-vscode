@@ -3,6 +3,7 @@
   "publisher": "DevGabrielMoreno",
   "displayName": "Just Colors🎨",
   "description": "",
+  "icon": "https://github.com/GabrielMoreno0207/Extensao-vscode/assets/88280712/5cbf6709-35d9-49ae-8d1f-ca41f26eed2b",
   "version": "0.1.8",
   "engines": {
     "vscode": "^1.88.0"
